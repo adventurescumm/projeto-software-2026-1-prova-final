@@ -40,7 +40,7 @@ def create_app():
             "name_instructor": course.name_instructor,
             "code_course": course.code_course,
             "created_at": course.created_at,
-            "status": course.status
+            "status": course.status.value
         }), 201
 
     @app.route("/courses/<uuid:course_id>", methods=["DELETE"])
