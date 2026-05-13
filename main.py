@@ -12,7 +12,7 @@ def create_app():
     postgres_url = os.environ.get('POSTGRES_URL', 'localhost')
     
     # Define o padrão, mas permite que o Pytest sobrescreva depois
-    db_uri = f"postgresql://{postgres_user}:{postgres_password}@{postgres_url}:5432/users"
+    db_uri = f"postgresql://{postgres_user}:{postgres_password}@{postgres_url}:5432/courses"
     app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("SQLALCHEMY_DATABASE_URI", db_uri)
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     
